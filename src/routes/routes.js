@@ -11,7 +11,7 @@ const routes = [
     routeMessage: "Home",
   },
   {
-    path: "/not-found",
+    path: "/",
     layout: BaseLayout,
     component: Home,
     exact: true,
