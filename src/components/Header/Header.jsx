@@ -1,5 +1,4 @@
 import {
-  Box,
   Toolbar,
   AppBar,
   Avatar,
