@@ -1,5 +1,4 @@
 import {
-  Box,
   Toolbar,
   AppBar,
   Avatar,
@@ -18,9 +17,12 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
 import { menuOptions } from "./options";
+import { useNavigate } from "react-router-dom";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 export const Header = () => {
   const classes = useStyles();
+  const navigate = useNavigate();
 
   const [open, setOpen] = React.useState(false);
 
@@ -52,15 +54,6 @@ export const Header = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Box display="flex">
-            <Avatar>C</Avatar>
-            <Box pl={1}>
-              <Typography>Christian Cedillo Palacios</Typography>
-              <Typography className={classes.role} variant="body2">
-                Lider de Book c
-              </Typography>
-            </Box>
-          </Box>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -86,11 +79,40 @@ export const Header = () => {
         </div>
         <Divider />
         <List>
+          <ListItem key={"profile"}>
+            <ListItemIcon>
+              <Avatar className={classes.avatar}>C</Avatar>
+            </ListItemIcon>
+            <ListItemText
+              primary={
+                <>
+                  <Typography>Christian Cedillo</Typography>
+                  <Typography className={classes.role} variant="body2">
+                    Lider de Book c
+                  </Typography>
+                </>
+              }
+            />
+          </ListItem>
+          <ListItem button onClick={() => navigate("/login")}>
+            <ListItemIcon>
+              <ExitToAppIcon color="primary" className={classes.optionIcon} />
+            </ListItemIcon>
+            <ListItemText primary="Salir" />
+          </ListItem>
+          <Divider />
           {menuOptions.map((option) => (
             <>
-              <ListItem button key={option.title}>
+              <ListItem
+                button
+                key={option.title}
+                onClick={() => navigate(option.route)}
+              >
                 <ListItemIcon>
-                  <option.icon />
+                  <option.iconOption
+                    color="primary"
+                    className={classes.optionIcon}
+                  />
                 </ListItemIcon>
                 <ListItemText primary={option.title} />
               </ListItem>

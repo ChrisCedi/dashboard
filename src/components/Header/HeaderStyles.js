@@ -56,8 +56,8 @@ const useStyles = makeStyles((theme) => ({
     }),
     overflowX: "hidden",
     width: theme.spacing(7) + 1,
-    [theme.breakpoints.up("sm")]: {
-      width: theme.spacing(7) + 1,
+    [theme.breakpoints.down("xs")]: {
+      width: 0,
     },
   },
   toolbar: {
@@ -70,6 +70,14 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+  },
+  avatar: {
+    width: theme.spacing(4),
+    height: theme.spacing(4),
+    marginRight: theme.spacing(1),
+  },
+  optionIcon: {
+    marginLeft: theme.spacing(0.5),
   },
 }));
 
