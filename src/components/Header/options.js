@@ -2,22 +2,32 @@ import HomeIcon from "@material-ui/icons/Home";
 import EmailIcon from "@material-ui/icons/Email";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import DateRangeIcon from "@material-ui/icons/DateRange";
 
 export const menuOptions = [
   {
     title: "Inicio",
-    icon: HomeIcon,
+    iconOption: HomeIcon,
+    route: "/",
   },
   {
-    title: "Mensajería",
-    icon: EmailIcon,
+    title: "Eventos",
+    iconOption: DateRangeIcon,
+    route: "/events",
+  },
+  {
+    title: "Mensajeria",
+    iconOption: EmailIcon,
+    route: "/",
   },
   {
     title: "Administración",
-    icon: AccountCircleIcon,
+    iconOption: AccountCircleIcon,
+    route: "/",
   },
   {
     title: "Acreditados",
-    icon: FavoriteIcon,
+    iconOption: FavoriteIcon,
+    route: "/",
   },
 ];

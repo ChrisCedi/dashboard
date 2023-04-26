@@ -6,6 +6,7 @@ import {
   TableRow,
   TableCell,
   TableBody,
+  withStyles,
 } from "@material-ui/core";
 import { useStyles } from "./SignatureTableStyles";
 import { tableData } from "./mocks";
@@ -14,16 +15,26 @@ import Paper from "@material-ui/core/Paper";
 export const SignatureTable = () => {
   const classes = useStyles();
 
+  const StyledTableCell = withStyles((theme) => ({
+    head: {
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.common.white,
+    },
+    body: {
+      fontSize: 14,
+    },
+  }))(TableCell);
+
   return (
     <TableContainer component={Paper} className={classes.container}>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell>Asesores</TableCell>
-            <TableCell>Octubre</TableCell>
-            <TableCell>Noviembre</TableCell>
-            <TableCell>Diciembre</TableCell>
-            <TableCell>Total</TableCell>
+            <StyledTableCell>Asesores</StyledTableCell>
+            <StyledTableCell>Octubre</StyledTableCell>
+            <StyledTableCell>Noviembre</StyledTableCell>
+            <StyledTableCell>Diciembre</StyledTableCell>
+            <StyledTableCell>Total</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>

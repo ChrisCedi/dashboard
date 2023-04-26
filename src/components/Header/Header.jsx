@@ -17,9 +17,12 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import MenuIcon from "@material-ui/icons/Menu";
 import clsx from "clsx";
 import { menuOptions } from "./options";
+import { useNavigate } from "react-router-dom";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 export const Header = () => {
   const classes = useStyles();
+  const navigate = useNavigate();
 
   const [open, setOpen] = React.useState(false);
 
@@ -91,11 +94,25 @@ export const Header = () => {
               }
             />
           </ListItem>
+          <ListItem button onClick={() => navigate("/login")}>
+            <ListItemIcon>
+              <ExitToAppIcon color="primary" className={classes.optionIcon} />
+            </ListItemIcon>
+            <ListItemText primary="Salir" />
+          </ListItem>
+          <Divider />
           {menuOptions.map((option) => (
             <>
-              <ListItem button key={option.title}>
+              <ListItem
+                button
+                key={option.title}
+                onClick={() => navigate(option.route)}
+              >
                 <ListItemIcon>
-                  <option.icon color="primary" className={classes.optionIcon} />
+                  <option.iconOption
+                    color="primary"
+                    className={classes.optionIcon}
+                  />
                 </ListItemIcon>
                 <ListItemText primary={option.title} />
               </ListItem>

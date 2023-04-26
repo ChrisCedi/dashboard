@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     flexDirection: "column",
     alignItems: "center",
+    paddingBottom: theme.spacing(6),
     backgroundColor: theme.palette.background.default,
     paddingLeft: theme.spacing(8),
     paddingRight: theme.spacing(8),
@@ -34,9 +35,6 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: "150px",
-  },
-  button: {
-    color: theme.palette.primary.light,
   },
 }));
 
