@@ -1,13 +1,11 @@
 import { makeStyles } from "@material-ui/core";
+import { Images } from "../../assets/Images";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     alignItems: "center",
     minHeight: "100vh",
-
-    backgroundImage:
-      "url(https://images.pexels.com/photos/7876708/pexels-photo-7876708.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
     backgroundSize: "cover",
     backgroundPosition: "center",
     [theme.breakpoints.down("sm")]: {
@@ -18,8 +16,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
-    backgroundColor: "rgba(240,240,240,.9)",
-    width: "50%",
+    width: "60%",
     padding: theme.spacing(4),
     borderRadius: 20,
     [theme.breakpoints.down("xs")]: {
@@ -34,21 +31,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
   },
-  gridImage: {
-    display: "flex",
-    justifyContent: "center",
-  },
+
   gridRemember: {
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
-  },
-  logo: {
-    height: "200px",
-    [theme.breakpoints.down("sm")]: {
-      width: "210px",
-      height: "120px",
-    },
   },
   forgetPassword: {
     display: "flex",
@@ -61,6 +48,21 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: "column",
+  },
+  gridSecondary: {
+    height: "100vh",
+    backgroundImage: `url(${Images.backgroundLogin})`,
+    backgroundSize: "cover",
+    display: "flex",
+    justifyContent: "flex-end",
+    padding: theme.spacing(8),
+  },
+  gridLogo: {
+    width: "100%",
+  },
+  headerLogo: {
+    height: "50px",
   },
 }));
 
