@@ -52,15 +52,6 @@ export const Header = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Box display="flex">
-            <Avatar>C</Avatar>
-            <Box pl={1}>
-              <Typography>Christian Cedillo Palacios</Typography>
-              <Typography className={classes.role} variant="body2">
-                Lider de Book c
-              </Typography>
-            </Box>
-          </Box>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -86,11 +77,26 @@ export const Header = () => {
         </div>
         <Divider />
         <List>
+          <ListItem key={"profile"}>
+            <ListItemIcon>
+              <Avatar className={classes.avatar}>C</Avatar>
+            </ListItemIcon>
+            <ListItemText
+              primary={
+                <>
+                  <Typography>Christian Cedillo</Typography>
+                  <Typography className={classes.role} variant="body2">
+                    Lider de Book c
+                  </Typography>
+                </>
+              }
+            />
+          </ListItem>
           {menuOptions.map((option) => (
             <>
               <ListItem button key={option.title}>
                 <ListItemIcon>
-                  <option.icon />
+                  <option.icon color="primary" className={classes.optionIcon} />
                 </ListItemIcon>
                 <ListItemText primary={option.title} />
               </ListItem>
