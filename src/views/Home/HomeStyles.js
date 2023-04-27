@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: theme.spacing(1),
     },
   },
+  title: {
+    paddingTop: theme.spacing(2),
+  },
   gridTitle: {
     display: "flex",
     justifyContent: "space-between",
@@ -38,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     color: theme.palette.primary.light,
+  },
+  gridButtons: {
+    backgroundColor: theme.palette.background.paper,
   },
 }));
 
