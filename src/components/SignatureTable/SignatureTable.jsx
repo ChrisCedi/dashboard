@@ -17,8 +17,8 @@ export const SignatureTable = () => {
 
   const StyledTableCell = withStyles((theme) => ({
     head: {
-      backgroundColor: theme.palette.primary.main,
-      color: theme.palette.common.white,
+      // backgroundColor: theme.palette.primary.main,
+      // color: theme.palette.common.white,
     },
     body: {
       fontSize: 14,

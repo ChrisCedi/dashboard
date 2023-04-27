@@ -10,8 +10,11 @@ import {
   ListItemIcon,
   ListItemText,
   List,
+  Box,
+  Hidden,
+  Paper,
 } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import { useStyles } from "./HeaderStyles";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -19,12 +22,15 @@ import clsx from "clsx";
 import { menuOptions } from "./options";
 import { useNavigate } from "react-router-dom";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import SettingsIcon from "@material-ui/icons/Settings";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import { Search } from "../Search/Search";
 
 export const Header = () => {
   const classes = useStyles();
   const navigate = useNavigate();
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -38,6 +44,7 @@ export const Header = () => {
     <div>
       <AppBar
         position="fixed"
+        component={Paper}
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
@@ -54,6 +61,19 @@ export const Header = () => {
           >
             <MenuIcon />
           </IconButton>
+          <Box className={classes.boxHeader}>
+            <Hidden smDown>
+              <Typography className={classes.typeAccount}>
+                Cuenta maestra
+              </Typography>
+            </Hidden>
+            <Box display="flex">
+              <IconButton color="inherit">
+                <NotificationsIcon />
+              </IconButton>
+              <Search />
+            </Box>
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -70,7 +90,11 @@ export const Header = () => {
         }}
       >
         <div className={classes.toolbar}>
-          <Typography variant="h5" color="primary">
+          <Typography
+            variant="h5"
+            color="primary"
+            className={classes.nameHeader}
+          >
             SISEC
           </Typography>
           <IconButton onClick={handleDrawerClose}>
@@ -93,6 +117,12 @@ export const Header = () => {
                 </>
               }
             />
+          </ListItem>
+          <ListItem button onClick={() => navigate("/login")}>
+            <ListItemIcon>
+              <SettingsIcon color="primary" className={classes.optionIcon} />
+            </ListItemIcon>
+            <ListItemText primary="Configuración" />
           </ListItem>
           <ListItem button onClick={() => navigate("/login")}>
             <ListItemIcon>

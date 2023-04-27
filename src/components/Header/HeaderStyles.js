@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   appBar: {
+    // backgroundColor: theme.palette.secondary.main,
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
@@ -24,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: "0",
     },
+  },
+  nameHeader: {
+    fontWeight: 600,
   },
   menuButton: {
     marginRight: theme.spacing(1),
@@ -78,6 +82,19 @@ const useStyles = makeStyles((theme) => ({
   },
   optionIcon: {
     marginLeft: theme.spacing(0.5),
+  },
+  typeAccount: {
+    textTransform: "upperCase",
+  },
+  boxHeader: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "flex-end",
+      width: "auto",
+    },
   },
 }));
 

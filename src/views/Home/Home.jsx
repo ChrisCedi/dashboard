@@ -19,7 +19,7 @@ export const Home = () => {
           <Button
             variant="contained"
             fullWidth
-            color="secondary"
+            color="primary"
             startIcon={<RecordVoiceOverIcon />}
           >
             Comunicados semanales
@@ -29,7 +29,7 @@ export const Home = () => {
           <Button
             variant="contained"
             fullWidth
-            color="secondary"
+            color="primary"
             startIcon={<DateRangeIcon />}
           >
             Eventos y prmociones
@@ -39,7 +39,7 @@ export const Home = () => {
           <Button
             variant="contained"
             fullWidth
-            color="secondary"
+            color="primary"
             startIcon={<SchoolIcon />}
           >
             Capacitación
