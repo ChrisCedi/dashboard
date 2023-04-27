@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-import { Images } from "../../assets/Images";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -52,12 +51,11 @@ const useStyles = makeStyles((theme) => ({
   },
   gridSecondary: {
     height: "100vh",
-    backgroundImage: `url(${Images.backgroundLogin})`,
+    backgroundImage: `url(https://images.pexels.com/photos/7681681/pexels-photo-7681681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`,
     backgroundSize: "cover",
-    backgroundPosition: "40% 50%",
     display: "flex",
     justifyContent: "flex-end",
-    padding: theme.spacing(8),
+    padding: theme.spacing(4),
   },
   gridLogo: {
     width: "100%",
