@@ -15,7 +15,8 @@ export const Search = () => {
   const ColorButton = withStyles((theme) => ({
     root: {
       color: theme.palette.getContrastText(theme.palette.primary.main),
-      backgroundColor: theme.palette.primary.light,
+      // border: "white",
+      backgroundColor: theme.palette.primary.main,
       "&:hover": {
         backgroundColor: theme.palette.primary.dark,
       },
@@ -29,15 +30,14 @@ export const Search = () => {
       <Paper className={classes.root}>
         <InputBase
           placeholder="Buscar"
-          // className={classes.root}
           variant="outlined"
           size="small"
           color="inherit"
         />
       </Paper>
       <Hidden xsDown>
-        <ColorButton>Registro rapido</ColorButton>
-        <ColorButton>Valor SOC</ColorButton>
+        <ColorButton variant="text">Registro rapido</ColorButton>
+        <ColorButton variant="text">Valor SOC</ColorButton>
       </Hidden>
     </Box>
   );

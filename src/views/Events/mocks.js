@@ -1,5 +1,9 @@
 export const cards = [
   {
+    title: "Tienda SOC",
+    url: "https://tiendasoc.com/wp-content/uploads/2023/03/Banners-tiendita_Mesa-de-trabajo-1-scaled.jpg",
+  },
+  {
     title: "Promociones",
     url: "https://img.freepik.com/foto-gratis/concepto-hombres-negocios-apreton-manos_53876-31214.jpg",
   },

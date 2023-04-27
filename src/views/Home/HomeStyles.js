@@ -2,22 +2,11 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    minHeight: "90vh",
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center",
+    minHeight: "100vh",
     paddingBottom: theme.spacing(6),
-    backgroundColor: theme.palette.background.alternative,
-    paddingLeft: theme.spacing(8),
-    paddingRight: theme.spacing(8),
-    [theme.breakpoints.down("xs")]: {
-      paddingLeft: theme.spacing(1),
-      paddingRight: theme.spacing(1),
-    },
   },
   title: {
-    paddingTop: theme.spacing(2),
+    paddingTop: theme.spacing(4),
   },
   gridTitle: {
     display: "flex",
@@ -27,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   titleTable: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   containerCards: {
     paddingTop: theme.spacing(4),

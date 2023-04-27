@@ -12,7 +12,6 @@ import {
   List,
   Box,
   Hidden,
-  Paper,
 } from "@material-ui/core";
 import React, { useState } from "react";
 import { useStyles } from "./HeaderStyles";
@@ -44,7 +43,6 @@ export const Header = () => {
     <div>
       <AppBar
         position="fixed"
-        component={Paper}
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
