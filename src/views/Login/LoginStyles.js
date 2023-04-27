@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     backgroundImage: `url(${Images.backgroundLogin})`,
     backgroundSize: "cover",
+    backgroundPosition: "40% 50%",
     display: "flex",
     justifyContent: "flex-end",
     padding: theme.spacing(8),
@@ -63,6 +64,9 @@ const useStyles = makeStyles((theme) => ({
   },
   headerLogo: {
     height: "50px",
+  },
+  imageLogo: {
+    height: "120px",
   },
 }));
 

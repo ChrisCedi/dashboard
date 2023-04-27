@@ -16,17 +16,17 @@ export const SignatureTable = () => {
   const classes = useStyles();
 
   const StyledTableCell = withStyles((theme) => ({
-    head: {
-      backgroundColor: theme.palette.primary.main,
-      color: theme.palette.common.white,
-    },
     body: {
       fontSize: 14,
     },
   }))(TableCell);
 
   return (
-    <TableContainer component={Paper} className={classes.container}>
+    <TableContainer
+      component={Paper}
+      className={classes.container}
+      style={{ borderRadius: 30 }}
+    >
       <Table className={classes.table}>
         <TableHead>
           <TableRow>

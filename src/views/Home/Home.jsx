@@ -1,50 +1,28 @@
 import React from "react";
 import { useStyles } from "./HomeStyles";
 import { SignatureTable } from "../../components/SignatureTable/SignatureTable";
-import { Typography, Grid, Button, Switch, Box } from "@material-ui/core";
-import DateRangeIcon from "@material-ui/icons/DateRange";
-import SchoolIcon from "@material-ui/icons/School";
-import RecordVoiceOverIcon from "@material-ui/icons/RecordVoiceOver";
+import { Typography, Grid, Switch, Box, Container } from "@material-ui/core";
+import { actionsItems } from "./mocks";
+import { CardActions } from "../../components/CardActions/CardActions";
 
 export const Home = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
-      <Grid container spacing={2}>
+    <Container className={classes.container}>
+      <Grid container spacing={4}>
         <Grid item xs={12}>
-          <Typography variant="h4">Inicio</Typography>
+          <Typography variant="h4" className={classes.title}>
+            Inicio
+          </Typography>
         </Grid>
-        <Grid item lg={4}>
-          <Button
-            variant="contained"
-            fullWidth
-            color="secondary"
-            startIcon={<RecordVoiceOverIcon />}
-          >
-            Comunicados semanales
-          </Button>
-        </Grid>
-        <Grid item lg={4}>
-          <Button
-            variant="contained"
-            fullWidth
-            color="secondary"
-            startIcon={<DateRangeIcon />}
-          >
-            Eventos y prmociones
-          </Button>
-        </Grid>
-        <Grid item lg={4}>
-          <Button
-            variant="contained"
-            fullWidth
-            color="secondary"
-            startIcon={<SchoolIcon />}
-          >
-            Capacitación
-          </Button>
-        </Grid>
+
+        {actionsItems.map((action, index) => (
+          <Grid item xs={12} md={6} lg={4} key={index}>
+            <CardActions action={action} />
+          </Grid>
+        ))}
+
         <Grid item xs={12} className={classes.gridTitle}>
           <Typography
             variant="h5"
@@ -60,6 +38,6 @@ export const Home = () => {
           <SignatureTable />
         </Grid>
       </Grid>
-    </div>
+    </Container>
   );
 };

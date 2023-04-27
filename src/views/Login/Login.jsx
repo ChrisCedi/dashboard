@@ -112,7 +112,9 @@ export const Login = () => {
           </form>
         </Grid>
         <Hidden smDown>
-          <Grid item xs={12} md={7} className={classes.gridSecondary} />
+          <Grid item xs={12} md={7} className={classes.gridSecondary}>
+            <img src={Images.socLogo} alt="soc" className={classes.imageLogo} />
+          </Grid>
         </Hidden>
       </Grid>
     </div>
